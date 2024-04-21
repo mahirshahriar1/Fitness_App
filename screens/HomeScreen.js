@@ -6,7 +6,7 @@ import {
   SafeAreaView,
   ScrollView,
 } from "react-native";
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import FitnessCards from "../components/FitnessCards";
 import { FitnessItems } from "../Context";
 
@@ -17,7 +17,23 @@ const HomeScreen = () => {
     calories,
 
     workout,
+    completed,
+    setCalories,
+    setMinutes,
+    setWorkout,
   } = useContext(FitnessItems);
+  
+  useEffect (() => {
+    let _today = new Date().toISOString().slice(0, 10);
+    let _completed = completed.filter(item => item.date === _today);
+    let _calories = _completed.length * 6.3;  
+    let _minutes = _completed.length * 2.5;
+    let _workout = _completed.length;
+    setCalories(_calories);
+    setMinutes(_minutes);
+    setWorkout(_workout);
+  })
+
   return (
     <ScrollView style={{ marginTop: 40 }}>
       <View>

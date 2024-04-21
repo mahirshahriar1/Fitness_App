@@ -12,8 +12,7 @@ import { useNavigation, useRoute } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
 import { FitnessItems } from "../Context";
 import { AntDesign } from "@expo/vector-icons";
-
-
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const WorkOutScreen = () => {
   const route = useRoute();
@@ -21,6 +20,12 @@ const WorkOutScreen = () => {
   const navigation = useNavigation();
   const { completed, setCompleted } = useContext(FitnessItems);
 
+  console.log(completed);
+  function isCompleted(name) {
+    // return completed.some((item) => item.name === name);
+    const today_date = new Date().toISOString().slice(0, 10);
+    return completed.some((item) => item.name === name && item.date === today_date);
+  }
   return (
     <>
       <ScrollView
@@ -60,7 +65,7 @@ const WorkOutScreen = () => {
               </Text>
             </View>
 
-            {completed.includes(item.name) ? (
+            {isCompleted(item.name) ? (
               <AntDesign
                 style={{ marginLeft: 40 }}
                 name="checkcircle"

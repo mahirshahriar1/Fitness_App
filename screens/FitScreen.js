@@ -6,9 +6,10 @@ import {
   Image,
   Pressable,
 } from "react-native";
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { FitnessItems } from "../Context";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const FitScreen = () => {
   const route = useRoute();
@@ -27,9 +28,43 @@ const FitScreen = () => {
     calories,
     setCalories,
     setWorkout,
-    workout,    
+    workout,
   } = useContext(FitnessItems);
-  console.log(completed, "completed excersise");
+
+  // Function to save completed exercises
+  const saveExercise = async (exercise) => {
+    const _date = new Date().toISOString(); 
+    // trim the date to only show the date
+    const date = _date.slice(0, 10);
+    const newCompletedExercise = {
+      name: exercise.name,
+      sets: exercise.sets,
+      date: date,
+    };
+
+   const updatedCompleted = [...completed, newCompletedExercise];
+    setCompleted(updatedCompleted);
+    await AsyncStorage.setItem(
+      "completedExercises",
+      JSON.stringify(updatedCompleted)
+    );
+  };
+  const clear_storage = async () => {
+    await AsyncStorage.removeItem("completedExercises");
+    setCompleted([]);
+  }
+
+  useEffect(() => {
+    const fetchCompleted = async () => {
+      const result = await AsyncStorage.getItem("completedExercises");
+      if (result) setCompleted(JSON.parse(result));
+    };
+    fetchCompleted();
+  }, []);
+
+  console.log(completed, "completed exercise");
+
+
   return (
     <SafeAreaView>
       <Image
@@ -90,7 +125,8 @@ const FitScreen = () => {
         <Pressable
           onPress={() => {
             navigation.navigate("Rest");
-            setCompleted([...completed, current.name]);
+            saveExercise(current);
+            // setCompleted([...completed, current.name]);
             setWorkout(workout + 1);
             setMinutes(minutes + 2.5);
             setCalories(calories + 6.3);
@@ -203,8 +239,34 @@ const FitScreen = () => {
               SKIP
             </Text>
           </Pressable>
+          
         )}
       </Pressable>
+      <Pressable
+            onPress={() => {
+              clear_storage();
+              setTimeout(() => {
+                setIndex(index + 1);
+              }, 2000);
+            }}
+            style={{
+              backgroundColor: "green",
+              padding: 10,
+              borderRadius: 20,
+              marginHorizontal: 20,
+              width: 100,
+            }}
+          >
+            <Text
+              style={{
+                color: "white",
+                fontWeight: "bold",
+                textAlign: "center",
+              }}
+            >
+              delete
+            </Text>
+          </Pressable>
     </SafeAreaView>
   );
 };
