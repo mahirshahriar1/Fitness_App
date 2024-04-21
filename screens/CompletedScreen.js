@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { View, Text, FlatList, StyleSheet, Button } from "react-native";
 import { FitnessItems } from "../Context";
-import DateTimePicker from '@react-native-community/datetimepicker';
+import DateTimePicker from "@react-native-community/datetimepicker";
 
 const CompletedScreen = () => {
   const { completed } = useContext(FitnessItems);
