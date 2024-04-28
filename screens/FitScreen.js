@@ -33,7 +33,7 @@ const FitScreen = () => {
 
   // Function to save completed exercises
   const saveExercise = async (exercise) => {
-    const _date = new Date().toISOString(); 
+    const _date = new Date().toISOString();
     // trim the date to only show the date
     const date = _date.slice(0, 10);
     const newCompletedExercise = {
@@ -42,7 +42,7 @@ const FitScreen = () => {
       date: date,
     };
 
-   const updatedCompleted = [...completed, newCompletedExercise];
+    const updatedCompleted = [...completed, newCompletedExercise];
     setCompleted(updatedCompleted);
     await AsyncStorage.setItem(
       "completedExercises",
@@ -52,7 +52,7 @@ const FitScreen = () => {
   const clear_storage = async () => {
     await AsyncStorage.removeItem("completedExercises");
     setCompleted([]);
-  }
+  };
 
   useEffect(() => {
     const fetchCompleted = async () => {
@@ -64,6 +64,39 @@ const FitScreen = () => {
 
   console.log(completed, "completed exercise");
 
+  const estimateCalories = (exerciseName, sets) => {
+    const baseCalories = {
+      "JUMPING JACKS": 10,
+      "INCLINE PUSH-UPS": 5,
+      "INCLINED PUSH-UPS": 5,
+      "WIDE ARM PUSH-UPS": 6,
+      "COBRA STRETCH": 4,
+      "CHEST STRETCH": 3,
+      "MOUNTAIN CLIMBERS": 8,
+      "HEEL TOUCH": 6,
+      PLANK: 4,
+      "LEG RAISES": 7,
+      "ARM RAISES": 5,
+      "TRICEP DIPS": 6,
+      DIAMOND_PUSHUP: 7,
+      "PUSH-UPS": 6,
+      "DUMBELL CURL": 5,
+      "INCH WORMS": 9,
+      "TRICEP LIFT": 5,
+      "DECLINE PUSH-UPS": 7,
+      "HINDU PUSH-UPS": 8,
+      "SHOULDER STRETCH": 2,
+      "PUSH-UP & ROTATION": 7,
+      BURPEES: 10,
+    };
+
+    const caloriesPerSet = baseCalories[exerciseName];
+    if (!caloriesPerSet) {
+      return 6.3 * sets;
+    }
+
+    return sets * caloriesPerSet;
+  };
 
   return (
     <SafeAreaView>
@@ -129,7 +162,7 @@ const FitScreen = () => {
             // setCompleted([...completed, current.name]);
             setWorkout(workout + 1);
             setMinutes(minutes + 2.5);
-            setCalories(calories + 6.3);
+            setCalories(calories + estimateCalories(current.name, current.sets));
             setTimeout(() => {
               setIndex(index + 1);
             }, 2000);
@@ -239,34 +272,33 @@ const FitScreen = () => {
               SKIP
             </Text>
           </Pressable>
-          
         )}
       </Pressable>
       <Pressable
-            onPress={() => {
-              clear_storage();
-              setTimeout(() => {
-                setIndex(index + 1);
-              }, 2000);
-            }}
-            style={{
-              backgroundColor: "green",
-              padding: 10,
-              borderRadius: 20,
-              marginHorizontal: 20,
-              width: 100,
-            }}
-          >
-            <Text
-              style={{
-                color: "white",
-                fontWeight: "bold",
-                textAlign: "center",
-              }}
-            >
-              delete
-            </Text>
-          </Pressable>
+        onPress={() => {
+          clear_storage();
+          setTimeout(() => {
+            setIndex(index + 1);
+          }, 2000);
+        }}
+        style={{
+          backgroundColor: "green",
+          padding: 10,
+          borderRadius: 20,
+          marginHorizontal: 20,
+          width: 100,
+        }}
+      >
+        <Text
+          style={{
+            color: "white",
+            fontWeight: "bold",
+            textAlign: "center",
+          }}
+        >
+          delete
+        </Text>
+      </Pressable>
     </SafeAreaView>
   );
 };

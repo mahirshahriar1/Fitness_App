@@ -24,6 +24,7 @@ const WorkOutScreen = () => {
   function isCompleted(name) {
     // return completed.some((item) => item.name === name);
     const today_date = new Date().toISOString().slice(0, 10);
+    // console.log(today_date);
     return completed.some((item) => item.name === name && item.date === today_date);
   }
   return (

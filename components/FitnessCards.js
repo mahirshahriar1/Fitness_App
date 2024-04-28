@@ -16,6 +16,7 @@ const FitnessCards = () => {
               image: item.image,
               excersises: item.excersises,
               id: item.id,
+              calories: item.calories,
             })
           }
           style={{ alignItems: "center", justifyContent: "center", margin: 10 }}

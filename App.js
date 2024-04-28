@@ -11,6 +11,8 @@ import RestScreen from "./screens/RestScreen";
 import CompletedScreen from "./screens/CompletedScreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { View } from 'react-native';
+import BMIScreen from "./screens/BMIScreen";
+import DietScreen from "./screens/DietScreen";
 
 const Tab = createBottomTabNavigator();
 const WorkoutStack = createNativeStackNavigator();
@@ -57,8 +59,8 @@ function MyTabs() {
     >
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Completed Exercises" component={CompletedScreen} />
-      <Tab.Screen name="BMI" component={HomeScreen} />
-      <Tab.Screen name="Diet" component={HomeScreen} />
+      <Tab.Screen name="BMI" component={BMIScreen} />
+      <Tab.Screen name="Diet" component={DietScreen} />
       <Tab.Screen name="Workout" component={WorkoutStackScreen} options={{title: 'Workout',tabBarButton: () => <View/>}} />      
     </Tab.Navigator>
   );

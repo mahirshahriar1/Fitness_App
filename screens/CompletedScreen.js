@@ -7,6 +7,7 @@ const CompletedScreen = () => {
   const { completed } = useContext(FitnessItems);
   const [date, setDate] = useState(new Date());
   const [showDatePicker, setShowDatePicker] = useState(false);
+  const [showAll, setShowAll] = useState(false); // State to control whether to show all exercises or filter by date
 
   const onDateChange = (event, selectedDate) => {
     const currentDate = selectedDate || date;
@@ -14,7 +15,11 @@ const CompletedScreen = () => {
     setDate(currentDate);
   };
 
-  const filteredData = completed.filter(item => {
+  const toggleShowAll = () => {
+    setShowAll(!showAll); // Toggle the state
+  };
+
+  const filteredData = showAll ? completed : completed.filter(item => {
     const itemDate = new Date(item.date);
     return itemDate.toDateString() === date.toDateString();
   });
@@ -30,16 +35,21 @@ const CompletedScreen = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Completed Exercises</Text>
-      <Button title="Select Date" onPress={() => setShowDatePicker(true)} />
-      {showDatePicker && (
-        <DateTimePicker
-          testID="dateTimePicker"
-          value={date}
-          mode="date"
-          is24Hour={true}
-          display="default"
-          onChange={onDateChange}
-        />
+      <Button title={showAll ? "Filter by Date" : "Show All"} onPress={toggleShowAll} />
+      {!showAll && (
+        <>
+          <Button title="Select Date" onPress={() => setShowDatePicker(true)} />
+          {showDatePicker && (
+            <DateTimePicker
+              testID="dateTimePicker"
+              value={date}
+              mode="date"
+              is24Hour={true}
+              display="default"
+              onChange={onDateChange}
+            />
+          )}
+        </>
       )}
       <FlatList
         data={filteredData}
