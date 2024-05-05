@@ -1,0 +1,607 @@
+{
+  "Underweight": {
+    "monday": [
+      {
+        "meal": "Breakfast",
+        "food": "Whole grain toast with peanut butter",
+        "calories": 350
+      },
+      {
+        "meal": "Lunch",
+        "food": "Quinoa salad with chickpeas and veggies",
+        "calories": 400
+      },
+      {
+        "meal": "Dinner",
+        "food": "Grilled fish with sweet potatoes and steamed vegetables",
+        "calories": 450
+      }
+    ],
+    "tuesday": [
+      {
+        "meal": "Breakfast",
+        "food": "Banana smoothie with protein powder",
+        "calories": 300
+      },
+      {
+        "meal": "Lunch",
+        "food": "Brown rice with grilled tofu and stir-fried vegetables",
+        "calories": 400
+      },
+      {
+        "meal": "Dinner",
+        "food": "Lean beef stir-fry with broccoli and brown rice",
+        "calories": 450
+      }
+    ],
+    "wednesday": [
+      {
+        "meal": "Breakfast",
+        "food": "Scrambled eggs with avocado on whole grain toast",
+        "calories": 350
+      },
+      {
+        "meal": "Lunch",
+        "food": "Chicken and vegetable soup with whole grain roll",
+        "calories": 400
+      },
+      {
+        "meal": "Dinner",
+        "food": "Baked cod with quinoa and roasted asparagus",
+        "calories": 450
+      }
+    ],
+    "thursday": [
+      {
+        "meal": "Breakfast",
+        "food": "Yogurt parfait with granola and mixed berries",
+        "calories": 300
+      },
+      {
+        "meal": "Lunch",
+        "food": "Mediterranean veggie wrap with hummus",
+        "calories": 400
+      },
+      {
+        "meal": "Dinner",
+        "food": "Turkey meatballs with whole wheat pasta and marinara sauce",
+        "calories": 450
+      }
+    ],
+    "friday": [
+      {
+        "meal": "Breakfast",
+        "food": "Whole grain pancakes with sliced bananas and maple syrup",
+        "calories": 350
+      },
+      {
+        "meal": "Lunch",
+        "food": "Spinach and feta omelette with whole grain toast",
+        "calories": 400
+      },
+      {
+        "meal": "Dinner",
+        "food": "Grilled shrimp skewers with quinoa salad",
+        "calories": 450
+      }
+    ],
+    "saturday": [
+      {
+        "meal": "Breakfast",
+        "food": "Vegetable omelette with whole grain English muffin",
+        "calories": 350
+      },
+      {
+        "meal": "Lunch",
+        "food": "Black bean and corn salad with grilled chicken",
+        "calories": 400
+      },
+      {
+        "meal": "Dinner",
+        "food": "Stuffed bell peppers with ground turkey and brown rice",
+        "calories": 450
+      }
+    ],
+    "sunday": [
+      {
+        "meal": "Breakfast",
+        "food": "Smoothie bowl with mixed fruits and nuts",
+        "calories": 300
+      },
+      {
+        "meal": "Lunch",
+        "food": "Quinoa tabbouleh with grilled shrimp",
+        "calories": 400
+      },
+      {
+        "meal": "Dinner",
+        "food": "Baked chicken breast with roasted vegetables",
+        "calories": 450
+      }
+    ]
+  },
+  "Normal weight": {
+    "monday": [
+      {
+        "meal": "Breakfast",
+        "food": "Scrambled eggs with whole grain toast",
+        "calories": 350
+      },
+      {
+        "meal": "Lunch",
+        "food": "Grilled chicken salad with avocado and mixed greens",
+        "calories": 400
+      },
+      {
+        "meal": "Dinner",
+        "food": "Baked salmon with quinoa and roasted vegetables",
+        "calories": 450
+      }
+    ],
+    "tuesday": [
+      {
+        "meal": "Breakfast",
+        "food": "Greek yogurt with berries and granola",
+        "calories": 300
+      },
+      {
+        "meal": "Lunch",
+        "food": "Turkey and hummus wrap with veggies",
+        "calories": 400
+      },
+      {
+        "meal": "Dinner",
+        "food": "Vegetable stir-fry with tofu and brown rice",
+        "calories": 450
+      }
+    ],
+    "wednesday": [
+      {
+        "meal": "Breakfast",
+        "food": "Whole grain toast with avocado and poached eggs",
+        "calories": 350
+      },
+      {
+        "meal": "Lunch",
+        "food": "Quinoa bowl with roasted vegetables and tahini dressing",
+        "calories": 400
+      },
+      {
+        "meal": "Dinner",
+        "food": "Grilled shrimp tacos with cabbage slaw and avocado salsa",
+        "calories": 450
+      }
+    ],
+    "thursday": [
+      {
+        "meal": "Breakfast",
+        "food": "Smoothie with spinach, banana, and protein powder",
+        "calories": 300
+      },
+      {
+        "meal": "Lunch",
+        "food": "Chicken Caesar salad with whole grain croutons",
+        "calories": 400
+      },
+      {
+        "meal": "Dinner",
+        "food": "Teriyaki tofu with broccoli and brown rice",
+        "calories": 450
+      }
+    ],
+    "friday": [
+      {
+        "meal": "Breakfast",
+        "food": "Whole grain waffles with berries and Greek yogurt",
+        "calories": 350
+      },
+      {
+        "meal": "Lunch",
+        "food": "Caprese salad with whole grain bread",
+        "calories": 400
+      },
+      {
+        "meal": "Dinner",
+        "food": "Lentil soup with whole grain roll",
+        "calories": 450
+      }
+    ],
+    "saturday": [
+      {
+        "meal": "Breakfast",
+        "food": "Avocado toast with poached eggs and cherry tomatoes",
+        "calories": 350
+      },
+      {
+        "meal": "Lunch",
+        "food": "Quinoa salad with grilled chicken and mango salsa",
+        "calories": 400
+      },
+      {
+        "meal": "Dinner",
+        "food": "Grilled steak with sweet potato fries and green beans",
+        "calories": 450
+      }
+    ],
+    "sunday": [
+      {
+        "meal": "Breakfast",
+        "food": "Vegetable frittata with whole grain toast",
+        "calories": 300
+      },
+      {
+        "meal": "Lunch",
+        "food": "Shrimp and avocado salad with citrus vinaigrette",
+        "calories": 400
+      },
+      {
+        "meal": "Dinner",
+        "food": "Baked cod with quinoa pilaf and roasted asparagus",
+        "calories": 450
+      }
+    ]
+  },
+  "Overweight": {
+    "monday": [
+      {
+        "meal": "Breakfast",
+        "food": "Whole grain toast with scrambled eggs and spinach",
+        "calories": 400
+      },
+      {
+        "meal": "Lunch",
+        "food": "Grilled chicken wrap with mixed greens and light dressing",
+        "calories": 450
+      },
+      {
+        "meal": "Dinner",
+        "food": "Baked cod with quinoa salad and steamed broccoli",
+        "calories": 500
+      }
+    ],
+    "tuesday": [
+      {
+        "meal": "Breakfast",
+        "food": "Greek yogurt with granola and sliced strawberries",
+        "calories": 350
+      },
+      {
+        "meal": "Lunch",
+        "food": "Turkey chili with whole grain crackers",
+        "calories": 450
+      },
+      {
+        "meal": "Dinner",
+        "food": "Vegetable stir-fry with shrimp and brown rice",
+        "calories": 500
+      }
+    ],
+    "wednesday": [
+      {
+        "meal": "Breakfast",
+        "food": "Oatmeal with almond butter and sliced bananas",
+        "calories": 400
+      },
+      {
+        "meal": "Lunch",
+        "food": "Grilled vegetable panini with hummus",
+        "calories": 450
+      },
+      {
+        "meal": "Dinner",
+        "food": "Turkey meatloaf with mashed sweet potatoes and green beans",
+        "calories": 500
+      }
+    ],
+    "thursday": [
+      {
+        "meal": "Breakfast",
+        "food": "Whole grain pancakes with blueberries and maple syrup",
+        "calories": 400
+      },
+      {
+        "meal": "Lunch",
+        "food": "Quinoa salad with grilled salmon and citrus vinaigrette",
+        "calories": 450
+      },
+      {
+        "meal": "Dinner",
+        "food": "Chicken and vegetable stir-fry with noodles",
+        "calories": 500
+      }
+    ],
+    "friday": [
+      {
+        "meal": "Breakfast",
+        "food": "Smoothie with spinach, mango, banana, and protein powder",
+        "calories": 350
+      },
+      {
+        "meal": "Lunch",
+        "food": "Black bean and corn salad with grilled chicken",
+        "calories": 450
+      },
+      {
+        "meal": "Dinner",
+        "food": "Baked tilapia with quinoa pilaf and roasted vegetables",
+        "calories": 500
+      }
+    ],
+    "saturday": [
+      {
+        "meal": "Breakfast",
+        "food": "Egg white omelette with vegetables and whole grain toast",
+        "calories": 400
+      },
+      {
+        "meal": "Lunch",
+        "food": "Asian chicken salad with sesame dressing",
+        "calories": 450
+      },
+      {
+        "meal": "Dinner",
+        "food": "Turkey burgers with whole wheat buns and sweet potato fries",
+        "calories": 500
+      }
+    ],
+    "sunday": [
+      {
+        "meal": "Breakfast",
+        "food": "Whole grain waffles with mixed berries and Greek yogurt",
+        "calories": 350
+      },
+      {
+        "meal": "Lunch",
+        "food": "Quinoa tabbouleh with grilled shrimp",
+        "calories": 450
+      },
+      {
+        "meal": "Dinner",
+        "food": "Pork tenderloin with roasted potatoes and green beans",
+        "calories": 500
+      }
+    ]
+  },
+  "Severe obesity": {
+    "monday": [
+      {
+        "meal": "Breakfast",
+        "food": "Egg white scramble with vegetables and turkey bacon",
+        "calories": 350
+      },
+      {
+        "meal": "Lunch",
+        "food": "Mixed greens salad with grilled chicken and light vinaigrette",
+        "calories": 400
+      },
+      {
+        "meal": "Dinner",
+        "food": "Baked fish with quinoa and steamed vegetables",
+        "calories": 450
+      }
+    ],
+    "tuesday": [
+      {
+        "meal": "Breakfast",
+        "food": "Smoothie with spinach, kale, banana, and protein powder",
+        "calories": 300
+      },
+      {
+        "meal": "Lunch",
+        "food": "Turkey and vegetable stir-fry with brown rice",
+        "calories": 400
+      },
+      {
+        "meal": "Dinner",
+        "food": "Grilled tofu with mixed vegetables and soy sauce",
+        "calories": 450
+      }
+    ],
+    "wednesday": [
+      {
+        "meal": "Breakfast",
+        "food": "Whole grain toast with avocado and poached eggs",
+        "calories": 350
+      },
+      {
+        "meal": "Lunch",
+        "food": "Bean and vegetable soup with whole grain roll",
+        "calories": 400
+      },
+      {
+        "meal": "Dinner",
+        "food": "Grilled chicken breast with quinoa and roasted Brussels sprouts",
+        "calories": 450
+      }
+    ],
+    "thursday": [
+      {
+        "meal": "Breakfast",
+        "food": "Greek yogurt with nuts, seeds, and honey",
+        "calories": 300
+      },
+      {
+        "meal": "Lunch",
+        "food": "Turkey and black bean salad with salsa dressing",
+        "calories": 400
+      },
+      {
+        "meal": "Dinner",
+        "food": "Salmon fillet with cauliflower rice and steamed broccoli",
+        "calories": 450
+      }
+    ],
+    "friday": [
+      {
+        "meal": "Breakfast",
+        "food": "Oatmeal with almond milk, berries, and chia seeds",
+        "calories": 350
+      },
+      {
+        "meal": "Lunch",
+        "food": "Grilled vegetable wrap with hummus",
+        "calories": 400
+      },
+      {
+        "meal": "Dinner",
+        "food": "Lean beef stir-fry with quinoa and mixed vegetables",
+        "calories": 450
+      }
+    ],
+    "saturday": [
+      {
+        "meal": "Breakfast",
+        "food": "Whole grain pancakes with Greek yogurt and fruit compote",
+        "calories": 350
+      },
+      {
+        "meal": "Lunch",
+        "food": "Tuna salad with mixed greens and light dressing",
+        "calories": 400
+      },
+      {
+        "meal": "Dinner",
+        "food": "Grilled shrimp skewers with brown rice and grilled zucchini",
+        "calories": 450
+      }
+    ],
+    "sunday": [
+      {
+        "meal": "Breakfast",
+        "food": "Scrambled eggs with spinach, tomatoes, and whole grain toast",
+        "calories": 350
+      },
+      {
+        "meal": "Lunch",
+        "food": "Quinoa and black bean bowl with avocado and salsa",
+        "calories": 400
+      },
+      {
+        "meal": "Dinner",
+        "food": "Baked chicken thighs with sweet potato mash and green beans",
+        "calories": 450
+      }
+    ]
+  },
+  "Obesity": {
+    "monday": [
+      {
+        "meal": "Breakfast",
+        "food": "Scrambled eggs with whole wheat toast and avocado",
+        "calories": 400
+      },
+      {
+        "meal": "Lunch",
+        "food": "Grilled chicken Caesar salad with light dressing",
+        "calories": 450
+      },
+      {
+        "meal": "Dinner",
+        "food": "Baked salmon with quinoa and roasted vegetables",
+        "calories": 500
+      }
+    ],
+    "tuesday": [
+      {
+        "meal": "Breakfast",
+        "food": "Greek yogurt with berries, almonds, and honey",
+        "calories": 350
+      },
+      {
+        "meal": "Lunch",
+        "food": "Turkey and vegetable stir-fry with brown rice",
+        "calories": 450
+      },
+      {
+        "meal": "Dinner",
+        "food": "Vegetable soup with whole grain roll",
+        "calories": 500
+      }
+    ],
+    "wednesday": [
+      {
+        "meal": "Breakfast",
+        "food": "Whole grain toast with almond butter and banana slices",
+        "calories": 400
+      },
+      {
+        "meal": "Lunch",
+        "food": "Quinoa salad with grilled shrimp and avocado",
+        "calories": 450
+      },
+      {
+        "meal": "Dinner",
+        "food": "Grilled chicken breast with baked sweet potato and steamed broccoli",
+        "calories": 500
+      }
+    ],
+    "thursday": [
+      {
+        "meal": "Breakfast",
+        "food": "Smoothie with spinach, mango, banana, and protein powder",
+        "calories": 350
+      },
+      {
+        "meal": "Lunch",
+        "food": "Tuna salad with mixed greens and light vinaigrette",
+        "calories": 450
+      },
+      {
+        "meal": "Dinner",
+        "food": "Lean beef stir-fry with mixed vegetables and brown rice",
+        "calories": 500
+      }
+    ],
+    "friday": [
+      {
+        "meal": "Breakfast",
+        "food": "Oatmeal with berries, nuts, and a drizzle of honey",
+        "calories": 400
+      },
+      {
+        "meal": "Lunch",
+        "food": "Grilled vegetable wrap with hummus",
+        "calories": 450
+      },
+      {
+        "meal": "Dinner",
+        "food": "Baked cod with quinoa pilaf and steamed asparagus",
+        "calories": 500
+      }
+    ],
+    "saturday": [
+      {
+        "meal": "Breakfast",
+        "food": "Whole grain pancakes with Greek yogurt and mixed berries",
+        "calories": 400
+      },
+      {
+        "meal": "Lunch",
+        "food": "Chicken and vegetable stir-fry with brown rice",
+        "calories": 450
+      },
+      {
+        "meal": "Dinner",
+        "food": "Grilled shrimp skewers with quinoa salad",
+        "calories": 500
+      }
+    ],
+    "sunday": [
+      {
+        "meal": "Breakfast",
+        "food": "Vegetable omelette with whole wheat toast",
+        "calories": 350
+      },
+      {
+        "meal": "Lunch",
+        "food": "Mixed greens salad with grilled chicken and balsamic vinaigrette",
+        "calories": 450
+      },
+      {
+        "meal": "Dinner",
+        "food": "Turkey meatballs with marinara sauce over whole wheat spaghetti",
+        "calories": 500
+      }
+    ]
+  }
+}
