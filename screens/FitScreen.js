@@ -13,12 +13,11 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const FitScreen = () => {
   const route = useRoute();
-  // console.log(route.params);
   const navigation = useNavigation();
   const [index, setIndex] = useState(0);
   const excersise = route.params.excersises;
   const current = excersise[index];
-  // console.log(current, "first excersise");
+  
 
   const {
     completed,
@@ -31,18 +30,23 @@ const FitScreen = () => {
     workout,
   } = useContext(FitnessItems);
 
+  console.log(completed);
   // Function to save completed exercises
   const saveExercise = async (exercise) => {
     const _date = new Date().toISOString();
     // trim the date to only show the date
     const date = _date.slice(0, 10);
+    
     const newCompletedExercise = {
+      id: exercise.id,
       name: exercise.name,
       sets: exercise.sets,
+      category: exercise.category,
       date: date,
     };
-
+    console.log(newCompletedExercise);
     const updatedCompleted = [...completed, newCompletedExercise];
+
     setCompleted(updatedCompleted);
     await AsyncStorage.setItem(
       "completedExercises",
@@ -62,7 +66,7 @@ const FitScreen = () => {
     fetchCompleted();
   }, []);
 
-  console.log(completed, "completed exercise");
+
 
   const estimateCalories = (exerciseName, sets) => {
     const baseCalories = {
@@ -74,11 +78,11 @@ const FitScreen = () => {
       "CHEST STRETCH": 3,
       "MOUNTAIN CLIMBERS": 8,
       "HEEL TOUCH": 6,
-      PLANK: 4,
+      "PLANK": 4,
       "LEG RAISES": 7,
       "ARM RAISES": 5,
       "TRICEP DIPS": 6,
-      DIAMOND_PUSHUP: 7,
+      "DIAMOND_PUSHUP": 7,
       "PUSH-UPS": 6,
       "DUMBELL CURL": 5,
       "INCH WORMS": 9,
@@ -87,7 +91,7 @@ const FitScreen = () => {
       "HINDU PUSH-UPS": 8,
       "SHOULDER STRETCH": 2,
       "PUSH-UP & ROTATION": 7,
-      BURPEES: 10,
+      "BURPEES": 10,
     };
 
     const caloriesPerSet = baseCalories[exerciseName];
@@ -273,32 +277,7 @@ const FitScreen = () => {
             </Text>
           </Pressable>
         )}
-      </Pressable>
-      <Pressable
-        onPress={() => {
-          clear_storage();
-          setTimeout(() => {
-            setIndex(index + 1);
-          }, 2000);
-        }}
-        style={{
-          backgroundColor: "green",
-          padding: 10,
-          borderRadius: 20,
-          marginHorizontal: 20,
-          width: 100,
-        }}
-      >
-        <Text
-          style={{
-            color: "white",
-            fontWeight: "bold",
-            textAlign: "center",
-          }}
-        >
-          delete
-        </Text>
-      </Pressable>
+      </Pressable>      
     </SafeAreaView>
   );
 };

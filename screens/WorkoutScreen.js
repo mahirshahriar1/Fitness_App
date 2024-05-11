@@ -20,12 +20,13 @@ const WorkOutScreen = () => {
   const navigation = useNavigation();
   const { completed, setCompleted } = useContext(FitnessItems);
 
-  console.log(completed);
-  function isCompleted(name) {
+  
+  function isCompleted(id) {
     // return completed.some((item) => item.name === name);
     const today_date = new Date().toISOString().slice(0, 10);
     // console.log(today_date);
-    return completed.some((item) => item.name === name && item.date === today_date);
+    // return completed.some((item) => item.name === name && item.date === today_date);
+    return completed.some((item) => item.id === id && item.date === today_date);
   }
   return (
     <>
@@ -66,7 +67,7 @@ const WorkOutScreen = () => {
               </Text>
             </View>
 
-            {isCompleted(item.name) ? (
+            {isCompleted(item.id) ? (
               <AntDesign
                 style={{ marginLeft: 40 }}
                 name="checkcircle"

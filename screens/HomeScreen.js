@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
 import FitnessCards from "../components/FitnessCards";
 import { FitnessItems } from "../Context";
@@ -6,7 +6,7 @@ import { FitnessItems } from "../Context";
 const HomeScreen = () => {
   const { minutes, calories, workout, completed, setCalories, setMinutes, setWorkout } = useContext(FitnessItems);
 
-  useEffect(() => {
+  useEffect(() => { 
     const today = new Date().toISOString().slice(0, 10);
     const completedToday = completed.filter(item => item.date === today);
     const burnedCalories = completedToday.length * 6.3;
@@ -25,8 +25,35 @@ const HomeScreen = () => {
   );
 };
 
+
 const Header = () => {
   const { workout, calories, minutes } = useContext(FitnessItems);
+  const [currentDateTime, setCurrentDateTime] = useState(formatDateTime(new Date()));
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentDateTime(formatDateTime(new Date()));
+    }, 1000); // Update every second
+
+    return () => clearInterval(timer); // Clean up the interval on component unmount
+  }, []);
+  function formatDateTime(date) {
+    const day = date.getDate();
+    const month = date.toLocaleString('en-GB', { month: 'long' });
+    const year = date.getFullYear();
+    const timeString = date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
+    return `${addOrdinalSuffix(day)} ${month}, ${year} ${timeString}`;
+  }
+  
+  function addOrdinalSuffix(day) {
+    if (day > 3 && day < 21) return day + 'th'; // for teens
+    switch (day % 10) {
+      case 1:  return day + "st";
+      case 2:  return day + "nd";
+      case 3:  return day + "rd";
+      default: return day + "th";
+    }
+  }
 
   return (
     <View style={styles.header}>
@@ -36,12 +63,7 @@ const Header = () => {
         <MetricItem label="KCAL" value={calories} />
         <MetricItem label="MINS" value={minutes} />
       </View>
-      <Image
-        style={styles.image}
-        source={{
-          uri: "https://t3.ftcdn.net/jpg/04/94/01/92/360_F_494019215_jZTW9skIs18uoKjZinCbxOflLhJm14iy.jpg",
-        }}
-      />
+      <Text style={styles.dateTime}>{currentDateTime}</Text>
     </View>
   );
 };
@@ -54,6 +76,20 @@ const MetricItem = ({ label, value }) => (
 );
 
 const styles = StyleSheet.create({
+  dateTime: {
+    color: "white",
+    backgroundColor: "#333",  // Darker background for contrast
+    fontSize: 24,             // Larger font size for better visibility
+    fontWeight: "bold",
+    fontFamily: "monospace",  // Monospace font for a digital clock appearance
+    textAlign: "center",
+    marginTop: 20,            // More space above the clock display
+    paddingVertical: 10,     // Vertical padding to give more space around the text
+    paddingHorizontal: 20,   // Horizontal padding to enhance the clock-like appearance
+    borderRadius: 10,        // Rounded corners for a softer look
+    borderWidth: 2,          // Optional: border to define the clock area clearly
+    borderColor: "#555",     // Border color that complements the background
+  },
   container: {
     flexGrow: 1,
   },

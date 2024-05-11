@@ -123,12 +123,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#F9F9F9',
+    backgroundColor: '#d4e2fa',
   },
   header: {
     fontSize: 28,
     fontWeight: '700',
-    color: '#303030',
+    color: '#4b1985',
     textAlign: 'center',
     marginVertical: 40,
   },
@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   button: {
-    backgroundColor: '#32A287',
+    backgroundColor: '#4b1985',
     padding: 15,
     borderRadius: 8,
     alignItems: 'center',
