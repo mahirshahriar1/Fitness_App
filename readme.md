@@ -41,7 +41,7 @@ The idea for FitSphere originated from the need to address the sedentary lifesty
 - **React Native**: An open-source UI software framework created by Meta Platforms, Inc. It is used to develop applications for Android, Android TV, iOS, macOS, tvOS, Web, Windows, and UWP by enabling developers to use the React framework along with native platform capabilities.
 
 ### Local Storage with AsyncStorage
-- **Personal settings, workout logs, preferences**: Ensures data persistence and quick access to user-specific data.
+- **Personal settings , workout logs, preferences**: Ensures data persistence and quick access to user-specific data.
 - **Interaction with Android OS**: Utilizes Android’s internal storage, providing unencrypted, asynchronous, persistent key-value storage.
 - **AsyncStorage Features**: Asynchronous, non-blocking operations, data persists after app restarts, simple, flexible key-value management.
 
