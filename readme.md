@@ -35,7 +35,7 @@ The app primarily targets CSE engineers and chair-oriented workers, focusing on 
 The idea for FitSphere originated from the need to address the sedentary lifestyle of CSE students and professionals. The goal was to create an accessible fitness solution tailored to their unique needs. The app is built on the principles of promoting regular physical activity, enhancing productivity through fitness, and supporting long-term health.
 
 ## Proposed Design
-![Proposed Design Diagram](images/Design.jpg)
+![Proposed Design Diagram](Images/Design.jpg)
 
 ## Tools Used
 - **React Native**: An open-source UI software framework created by Meta Platforms, Inc. It is used to develop applications for Android, Android TV, iOS, macOS, tvOS, Web, Windows, and UWP by enabling developers to use the React framework along with native platform capabilities.
@@ -48,11 +48,11 @@ The idea for FitSphere originated from the need to address the sedentary lifesty
 ## Final Deployment
 
 ### Flowchart and Data
-![Flowchart](images/Flowchart.png)
-![Data](images/ERD.png)
+![Flowchart](Images/Flowchart.png)
+![Data](Images/ERD.png)
 
 ### App demonstration with screenshots
-![Screenshot](images/Screenshot.jpg)
+![Screenshot](Images/Screenshot.jpg)
 
 ## Future Directions
 - **Online Database Integration**: Sync data with an online database to prevent data loss and enable access across multiple devices.
